@@ -1,0 +1,246 @@
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #333;
+    /* Background color of the track */
+}
+
+/* Specify the handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #838181;
+    /* Color of the scrollbar thumb */
+    border-radius: 6px;
+    /* Border radius of the thumb */
+    border: 3px solid #333;
+    /* Border around the thumb */
+}
+
+/* Specify the corner of the scrollbar */
+::-webkit-scrollbar-corner {
+    background: #333;
+    /* Background color of the scrollbar corner */
+}
+
+
+html,
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+header {
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all ease 600ms;
+    
+    
+}
+.bgblack{
+    background-color:rgb(20, 20, 20);
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1242px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+
+.leftcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.mainnav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    color: #e5e5e5;
+    opacity: .7;
+
+}
+
+.navitem {
+    cursor: pointer;
+}
+
+.rightcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+
+}
+
+.invert {
+    filter: invert(1);
+    opacity: .7;
+}
+
+/* banner section*/
+
+.bannersection {
+    width: 100%;
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+}
+
+
+.bannercontent {
+    display: flex;
+    flex-direction: column;
+   padding-top: 60px;
+    max-width: 1242px;
+    margin: 0 auto;
+    min-height: 90vh;
+
+}
+
+.bannertitle {
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.bannerinfo {
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.banneroverview {
+    font-size: 16.4px;
+    color: white;
+    line-height: 1.3;
+
+}
+
+.actionbutton {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.actionb1 {
+    border: none;
+    background-color: white;
+    padding: 8px 23px;
+    margin-right: 11px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+/* banner section end*/
+
+
+/* movies section*/
+
+.moviescontainer {
+    width: 100%;
+    max-width: 1242px;
+    margin: 0 auto;
+
+}
+.moviesection{
+    margin: 40px 0;
+}
+
+.moviessectionheading {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.explore {
+
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+}
+
+.moviessectionheading:hover.explore {
+
+    display: inline-block;
+}
+
+
+.moviesrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.movieitem {
+    width: 300px;
+    position:relative;
+
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 6px
+}
+.movieitemimg{
+    width: inherit;
+}
+.movieitem .iframediv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index: 10;
+    display: none;
+ border: none;
+ outline: none;
+}
+.movieitem:hover .iframediv{
+    display: block;
+}
+
+.movieitem:hover {
+    transform: scale(1.1);
+    transition: transform linear 300ms;
+
+
+}
+
+
+
+@media(max-width:767px) {
+    .mainnav {
+        display: none;
+    }
+}
